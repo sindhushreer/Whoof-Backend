@@ -21,6 +21,10 @@
 		120E1BC228548C6100B88BE6 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120E1BC128548C6100B88BE6 /* CustomTextField.swift */; };
 		12ABEB0728461DA7005FCE5A /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12ABEB0628461DA7005FCE5A /* LoginView.swift */; };
 		12ABEB09284620B0005FCE5A /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12ABEB08284620B0005FCE5A /* Colors.swift */; };
+		12D3085B2858939B00C56D87 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D3085A2858939B00C56D87 /* NetworkRequest.swift */; };
+		12D3085D285893C900C56D87 /* WhoofRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D3085C285893C900C56D87 /* WhoofRequests.swift */; };
+		12D3085F2858974500C56D87 /* HTTPHeaders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D3085E2858974500C56D87 /* HTTPHeaders.swift */; };
+		12D308612858976000C56D87 /* BetterDecodingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D308602858976000C56D87 /* BetterDecodingError.swift */; };
 		12ED5CEA2845EDCB009C2E06 /* WhoofApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12ED5CE92845EDCB009C2E06 /* WhoofApp.swift */; };
 		12ED5CEC2845EDCB009C2E06 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12ED5CEB2845EDCB009C2E06 /* ContentView.swift */; };
 		12ED5CEE2845EDCC009C2E06 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12ED5CED2845EDCC009C2E06 /* Assets.xcassets */; };
@@ -63,6 +67,10 @@
 		120E1BC128548C6100B88BE6 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		12ABEB0628461DA7005FCE5A /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		12ABEB08284620B0005FCE5A /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		12D3085A2858939B00C56D87 /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
+		12D3085C285893C900C56D87 /* WhoofRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhoofRequests.swift; sourceTree = "<group>"; };
+		12D3085E2858974500C56D87 /* HTTPHeaders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPHeaders.swift; sourceTree = "<group>"; };
+		12D308602858976000C56D87 /* BetterDecodingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetterDecodingError.swift; sourceTree = "<group>"; };
 		12ED5CE62845EDCB009C2E06 /* Whoof.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Whoof.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		12ED5CE92845EDCB009C2E06 /* WhoofApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhoofApp.swift; sourceTree = "<group>"; };
 		12ED5CEB2845EDCB009C2E06 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -138,6 +146,17 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		12D308592858936300C56D87 /* CombineNetwork */ = {
+			isa = PBXGroup;
+			children = (
+				12D3085A2858939B00C56D87 /* NetworkRequest.swift */,
+				12D3085C285893C900C56D87 /* WhoofRequests.swift */,
+				12D3085E2858974500C56D87 /* HTTPHeaders.swift */,
+				12D308602858976000C56D87 /* BetterDecodingError.swift */,
+			);
+			path = CombineNetwork;
+			sourceTree = "<group>";
+		};
 		12ED5CDD2845EDCA009C2E06 = {
 			isa = PBXGroup;
 			children = (
@@ -161,6 +180,7 @@
 		12ED5CE82845EDCB009C2E06 /* Whoof */ = {
 			isa = PBXGroup;
 			children = (
+				12D308592858936300C56D87 /* CombineNetwork */,
 				120E1BC0285487E700B88BE6 /* Extensions */,
 				120E1BB228546BD600B88BE6 /* Fonts */,
 				120E1BA62854587100B88BE6 /* Login */,
@@ -340,6 +360,8 @@
 				120E1BC228548C6100B88BE6 /* CustomTextField.swift in Sources */,
 				12ABEB0728461DA7005FCE5A /* LoginView.swift in Sources */,
 				12ABEB09284620B0005FCE5A /* Colors.swift in Sources */,
+				12D3085F2858974500C56D87 /* HTTPHeaders.swift in Sources */,
+				12D3085D285893C900C56D87 /* WhoofRequests.swift in Sources */,
 				120E1BB128546A8200B88BE6 /* KeyPad.swift in Sources */,
 				120E1BB52854746100B88BE6 /* VerifyOTPView.swift in Sources */,
 				120E1BB92854762700B88BE6 /* SegmentsView.swift in Sources */,
@@ -348,7 +370,9 @@
 				12ED5CEA2845EDCB009C2E06 /* WhoofApp.swift in Sources */,
 				120E1BAA28545D1E00B88BE6 /* cornerRadius Extension.swift in Sources */,
 				120E1BAD28546A0A00B88BE6 /* KeyPadButton.swift in Sources */,
+				12D308612858976000C56D87 /* BetterDecodingError.swift in Sources */,
 				120E1BB7285475A700B88BE6 /* OnboardingView.swift in Sources */,
+				12D3085B2858939B00C56D87 /* NetworkRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

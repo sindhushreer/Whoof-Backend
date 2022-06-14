@@ -33,7 +33,7 @@ struct OnboardingView: View {
                 .cornerRadius(40)
                 .padding()
                 Button {
-                    
+                    OnboardingVM.getData()
                 } label: {
                     Text("Contiue")
                         .font(.system(size: 14))
