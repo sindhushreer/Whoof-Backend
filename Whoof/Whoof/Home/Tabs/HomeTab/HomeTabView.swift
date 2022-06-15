@@ -11,14 +11,14 @@ import SwiftUI
 struct HomeTabView: View {
     
     @Binding var tabSelection: HomeView.WhoofTabs
-    
+    @ObservedObject var homeTabVM = HomeTabViewModel()
     var body: some View {
         ZStack {
             Color.tabSelected
             VStack {
                 HStack {
                     Button {
-                        
+                        homeTabVM.feedFood()
                     } label: {
                         VStack(alignment: .leading) {
                             Text("Feed your\n Dog!")

@@ -16,11 +16,12 @@ public typealias Headers = [String: String]
 enum WhoofEndpoints {
     
     case feedFood
+    case feedWater
     
     //specify the type of HTTP request
     var httpMethod: HTTPMethod {
         switch self {
-        case .feedFood:
+        case .feedFood,.feedWater:
             return .GET
         }
     }
@@ -38,15 +39,19 @@ enum WhoofEndpoints {
         switch self {
         case .feedFood:
             return nil
+        case .feedWater:
+            return nil
         }
     }
-    
     // compose urls for each request
     func getURL(from environment: NetworkEnvironment) -> String {
         let baseUrl = environment.whoofServiceBaseURL
         switch self {
         case .feedFood:
-            return "http://192.168.0.102/greet"
+            return "\(baseUrl)/feedFood"
+        case .feedWater:
+            return "\(baseUrl)/feedWater"
+            
         }
     }
 }
@@ -73,18 +78,24 @@ extension NetworkEnvironment {
 
 protocol WhoofServiceable {
     
-    func feedFood() -> AnyPublisher<NetworkResponseModel, NetworkRequestError>
+    func feedFood() -> AnyPublisher<FeedNetworkResponseModel, NetworkRequestError>
+    func feedWater() -> AnyPublisher<FeedNetworkResponseModel, NetworkRequestError>
     
 }
 
 class WhoofService: WhoofServiceable {
     
-    func feedFood() -> AnyPublisher<NetworkResponseModel, NetworkRequestError> {
+    func feedFood() -> AnyPublisher<FeedNetworkResponseModel, NetworkRequestError> {
         let endpoint = WhoofEndpoints.feedFood
         let request = endpoint.createRequest(environment: self.environment)
         return self.networkRequest.request(request)
     }
     
+    func feedWater() -> AnyPublisher<FeedNetworkResponseModel, NetworkRequestError> {
+        let endpoint = WhoofEndpoints.feedWater
+        let request = endpoint.createRequest(environment: self.environment)
+        return self.networkRequest.request(request)
+    }
     
     
     private var networkRequest: Requestable
@@ -100,7 +111,3 @@ class WhoofService: WhoofServiceable {
     }
 }
 
-struct NetworkResponseModel: Codable {
-    var status: String
-    var ip: String
-}
