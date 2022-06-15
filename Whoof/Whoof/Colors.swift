@@ -92,6 +92,9 @@ extension UIColor {
 }
 
 extension Color {
+    static let placeholder = Color("placeholder")
+    static let tabUnselected = Color("tabUnslected")
+    static let tabSelected = Color("tabSelected")
     static var random: Color {
         return Color(red: .random(in: 0...1),
                      green: .random(in: 0...1),

@@ -15,6 +15,10 @@ struct HomeView: View {
         case profile
     }
     
+    init() {
+        UITabBar.appearance().unselectedItemTintColor = UIColor.tabUnselected
+    }
+    
     @State var selectedTab: WhoofTabs = .home
     
     var body: some View {
@@ -25,17 +29,24 @@ struct HomeView: View {
                         Image("Analytics")
                         Text("Analytics")
                     }
+                    .tag(WhoofTabs.analytics)
                 HomeTabView(tabSelection: $selectedTab)
                     .tabItem {
                         Image("Home")
                         Text("Home")
                     }
+                    .tag(WhoofTabs.home)
                 ProfileView(tabSelection: $selectedTab)
                     .tabItem {
                         Image("Profile")
                         Text("Profile")
                     }
+                    .tag(WhoofTabs.profile)
+            }
+            .onAppear {
+                selectedTab = .home
             }
         }
+        .accentColor(.tabSelected)
     }
 }
