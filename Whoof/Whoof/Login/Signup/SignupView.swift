@@ -10,7 +10,7 @@ import SwiftUI
 
 struct SignUpView: View {
     @ObservedObject var signUpVM = SignUpViewModel()
-    
+    @EnvironmentObject var userAuth: UserAuth
     var body: some View {
         ZStack {
             VStack {
@@ -31,7 +31,7 @@ struct SignUpView: View {
                 .padding()
                 Spacer()
                 Button {
-                    
+                    userAuth.login()
                 } label: {
                     Text("Contiue")
                         .font(.system(size: 14))

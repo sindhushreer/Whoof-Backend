@@ -6,11 +6,19 @@
 //
 
 import SwiftUI
+import LocalAuthentication
 
 struct ContentView: View {
+    @EnvironmentObject var userAuth: UserAuth
+    
     var body: some View {
-        NavigationView {
-            LoginView()
+        if !userAuth.isLoggedIn {
+            NavigationView {
+                LoginView()
+            }
+        }
+        else {
+            HomeView()
         }
     }
 }

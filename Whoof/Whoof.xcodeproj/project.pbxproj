@@ -19,6 +19,9 @@
 		120E1BBD2854842400B88BE6 /* OnBoardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120E1BBC2854842400B88BE6 /* OnBoardingViewModel.swift */; };
 		120E1BBF285487E000B88BE6 /* View Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120E1BBE285487E000B88BE6 /* View Extension.swift */; };
 		120E1BC228548C6100B88BE6 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120E1BC128548C6100B88BE6 /* CustomTextField.swift */; };
+		122F5AAA285A139E00869540 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122F5AA9285A139E00869540 /* HomeView.swift */; };
+		122F5AAC285A15D600869540 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122F5AAB285A15D600869540 /* Common.swift */; };
+		122F5AAE285A19E200869540 /* UserAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122F5AAD285A19E200869540 /* UserAuth.swift */; };
 		12ABEB0728461DA7005FCE5A /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12ABEB0628461DA7005FCE5A /* LoginView.swift */; };
 		12ABEB09284620B0005FCE5A /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12ABEB08284620B0005FCE5A /* Colors.swift */; };
 		12C7DC472859C7F800E6D00F /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C7DC462859C7F800E6D00F /* SignupView.swift */; };
@@ -68,6 +71,9 @@
 		120E1BBC2854842400B88BE6 /* OnBoardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewModel.swift; sourceTree = "<group>"; };
 		120E1BBE285487E000B88BE6 /* View Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View Extension.swift"; sourceTree = "<group>"; };
 		120E1BC128548C6100B88BE6 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		122F5AA9285A139E00869540 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		122F5AAB285A15D600869540 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		122F5AAD285A19E200869540 /* UserAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuth.swift; sourceTree = "<group>"; };
 		12ABEB0628461DA7005FCE5A /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		12ABEB08284620B0005FCE5A /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		12C7DC462859C7F800E6D00F /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
@@ -154,6 +160,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		122F5AA8285A138A00869540 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				122F5AA9285A139E00869540 /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		12C7DC452859C7E500E6D00F /* Signup */ = {
 			isa = PBXGroup;
 			children = (
@@ -205,6 +219,7 @@
 		12ED5CE82845EDCB009C2E06 /* Whoof */ = {
 			isa = PBXGroup;
 			children = (
+				122F5AA8285A138A00869540 /* Home */,
 				12D308592858936300C56D87 /* CombineNetwork */,
 				120E1BC0285487E700B88BE6 /* Extensions */,
 				120E1BB228546BD600B88BE6 /* Fonts */,
@@ -219,6 +234,8 @@
 				120E1BB82854762700B88BE6 /* SegmentsView.swift */,
 				120E1BBA2854830100B88BE6 /* EntryField.swift */,
 				120E1BC128548C6100B88BE6 /* CustomTextField.swift */,
+				122F5AAB285A15D600869540 /* Common.swift */,
+				122F5AAD285A19E200869540 /* UserAuth.swift */,
 			);
 			path = Whoof;
 			sourceTree = "<group>";
@@ -384,6 +401,7 @@
 				12C7DC4A2859C83A00E6D00F /* SignupViewModel.swift in Sources */,
 				12C7DC4F2859C98300E6D00F /* SignInViewModel.swift in Sources */,
 				120E1BBF285487E000B88BE6 /* View Extension.swift in Sources */,
+				122F5AAE285A19E200869540 /* UserAuth.swift in Sources */,
 				12C7DC472859C7F800E6D00F /* SignupView.swift in Sources */,
 				120E1BC228548C6100B88BE6 /* CustomTextField.swift in Sources */,
 				12ABEB0728461DA7005FCE5A /* LoginView.swift in Sources */,
@@ -391,6 +409,7 @@
 				12D3085D285893C900C56D87 /* WhoofRequests.swift in Sources */,
 				120E1BB128546A8200B88BE6 /* KeyPad.swift in Sources */,
 				120E1BB52854746100B88BE6 /* VerifyOTPView.swift in Sources */,
+				122F5AAC285A15D600869540 /* Common.swift in Sources */,
 				120E1BB92854762700B88BE6 /* SegmentsView.swift in Sources */,
 				12ED5CEC2845EDCB009C2E06 /* ContentView.swift in Sources */,
 				120E1BBD2854842400B88BE6 /* OnBoardingViewModel.swift in Sources */,
@@ -399,6 +418,7 @@
 				120E1BAD28546A0A00B88BE6 /* KeyPadButton.swift in Sources */,
 				12D308612858976000C56D87 /* BetterDecodingError.swift in Sources */,
 				120E1BB7285475A700B88BE6 /* OnboardingView.swift in Sources */,
+				122F5AAA285A139E00869540 /* HomeView.swift in Sources */,
 				12C7DC4D2859C97600E6D00F /* SignInView.swift in Sources */,
 				12D3085B2858939B00C56D87 /* NetworkRequest.swift in Sources */,
 			);

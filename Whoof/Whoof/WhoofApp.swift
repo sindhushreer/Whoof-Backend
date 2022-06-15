@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct WhoofApp: App {
+    @StateObject private var userAuth = UserAuth()
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(userAuth)
         }
     }
 }
