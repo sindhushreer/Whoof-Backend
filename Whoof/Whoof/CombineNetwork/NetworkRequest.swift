@@ -124,11 +124,6 @@ public struct NetworkRequest {
         }
         
         urlRequest.httpBody = body
-        if url.absoluteString.contains("set_user") {
-            print(urlRequest.url?.absoluteString)
-            print(String(data: urlRequest.httpBody!, encoding: .utf8))
-            print(urlRequest.headers)
-        }
         return urlRequest
     }
 }

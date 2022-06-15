@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-class OnboardingViewModel: ObservableObject {
+class SignUpViewModel: ObservableObject {
     @Published var name = ""
     @Published var email = ""
     @Published var password = ""

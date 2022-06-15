@@ -46,7 +46,7 @@ enum WhoofEndpoints {
         let baseUrl = environment.whoofServiceBaseURL
         switch self {
         case .feedFood:
-            return "192.168.0.101/greet"
+            return "http://192.168.0.102/greet"
         }
     }
 }

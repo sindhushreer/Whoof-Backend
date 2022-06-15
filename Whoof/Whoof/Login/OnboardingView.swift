@@ -21,31 +21,9 @@ struct OnboardingView: View {
             VStack {
                 SegmentsView(selectedIndex: $selectedIndex, segments: ["Sign-in","Sign-up"])
                     .padding()
-                VStack {
-                    EntryField(placeHolder: "Email Address", prompt: OnboardingVM.emailPrompt, field: $OnboardingVM.email)
-                        .padding()
-                    Divider()
-                        .padding(.horizontal)
-                    EntryField(placeHolder: "Password", prompt: OnboardingVM.passwordPrompt, field: $OnboardingVM.password, isSecure: true)
-                        .padding()
+                if selectedIndex == 1 {
+                    SignUpView()
                 }
-                .background(Color.white)
-                .cornerRadius(40)
-                .padding()
-                Button {
-                    OnboardingVM.getData()
-                } label: {
-                    Text("Contiue")
-                        .font(.system(size: 14))
-                        .foregroundColor(.white)
-                        .fontWeight(.semibold)
-                        .textCase(.uppercase)
-                        .padding()
-                }
-                .frame(maxWidth: UIScreen.main.bounds.width - 30)
-                .background(Color(hex: "#8A56AC"))
-                .cornerRadius(40)
-                .padding()
             }
         }
         .navigationBarHidden(true)
