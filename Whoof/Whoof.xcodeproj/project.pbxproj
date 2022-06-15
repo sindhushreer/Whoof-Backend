@@ -23,6 +23,8 @@
 		12ABEB09284620B0005FCE5A /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12ABEB08284620B0005FCE5A /* Colors.swift */; };
 		12C7DC472859C7F800E6D00F /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C7DC462859C7F800E6D00F /* SignupView.swift */; };
 		12C7DC4A2859C83A00E6D00F /* SignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C7DC492859C83A00E6D00F /* SignupViewModel.swift */; };
+		12C7DC4D2859C97600E6D00F /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C7DC4C2859C97600E6D00F /* SignInView.swift */; };
+		12C7DC4F2859C98300E6D00F /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C7DC4E2859C98300E6D00F /* SignInViewModel.swift */; };
 		12D3085B2858939B00C56D87 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D3085A2858939B00C56D87 /* NetworkRequest.swift */; };
 		12D3085D285893C900C56D87 /* WhoofRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D3085C285893C900C56D87 /* WhoofRequests.swift */; };
 		12D308612858976000C56D87 /* BetterDecodingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D308602858976000C56D87 /* BetterDecodingError.swift */; };
@@ -70,6 +72,8 @@
 		12ABEB08284620B0005FCE5A /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		12C7DC462859C7F800E6D00F /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
 		12C7DC492859C83A00E6D00F /* SignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewModel.swift; sourceTree = "<group>"; };
+		12C7DC4C2859C97600E6D00F /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		12C7DC4E2859C98300E6D00F /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 		12D3085A2858939B00C56D87 /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
 		12D3085C285893C900C56D87 /* WhoofRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhoofRequests.swift; sourceTree = "<group>"; };
 		12D308602858976000C56D87 /* BetterDecodingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetterDecodingError.swift; sourceTree = "<group>"; };
@@ -113,6 +117,7 @@
 		120E1BA62854587100B88BE6 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				12C7DC4B2859C95E00E6D00F /* SignIn */,
 				12C7DC452859C7E500E6D00F /* Signup */,
 				120E1BAB285469EF00B88BE6 /* NumberPad */,
 				120E1BA72854589700B88BE6 /* PhoneLoginView.swift */,
@@ -156,6 +161,15 @@
 				12C7DC492859C83A00E6D00F /* SignupViewModel.swift */,
 			);
 			path = Signup;
+			sourceTree = "<group>";
+		};
+		12C7DC4B2859C95E00E6D00F /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				12C7DC4C2859C97600E6D00F /* SignInView.swift */,
+				12C7DC4E2859C98300E6D00F /* SignInViewModel.swift */,
+			);
+			path = SignIn;
 			sourceTree = "<group>";
 		};
 		12D308592858936300C56D87 /* CombineNetwork */ = {
@@ -368,6 +382,7 @@
 				120E1BAF28546A4E00B88BE6 /* KeyPadRow.swift in Sources */,
 				120E1BA82854589700B88BE6 /* PhoneLoginView.swift in Sources */,
 				12C7DC4A2859C83A00E6D00F /* SignupViewModel.swift in Sources */,
+				12C7DC4F2859C98300E6D00F /* SignInViewModel.swift in Sources */,
 				120E1BBF285487E000B88BE6 /* View Extension.swift in Sources */,
 				12C7DC472859C7F800E6D00F /* SignupView.swift in Sources */,
 				120E1BC228548C6100B88BE6 /* CustomTextField.swift in Sources */,
@@ -384,6 +399,7 @@
 				120E1BAD28546A0A00B88BE6 /* KeyPadButton.swift in Sources */,
 				12D308612858976000C56D87 /* BetterDecodingError.swift in Sources */,
 				120E1BB7285475A700B88BE6 /* OnboardingView.swift in Sources */,
+				12C7DC4D2859C97600E6D00F /* SignInView.swift in Sources */,
 				12D3085B2858939B00C56D87 /* NetworkRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

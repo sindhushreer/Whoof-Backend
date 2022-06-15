@@ -21,7 +21,10 @@ struct OnboardingView: View {
             VStack {
                 SegmentsView(selectedIndex: $selectedIndex, segments: ["Sign-in","Sign-up"])
                     .padding()
-                if selectedIndex == 1 {
+                if selectedIndex == 0 {
+                    SignInView()
+                }
+                else if selectedIndex == 1 {
                     SignUpView()
                 }
             }

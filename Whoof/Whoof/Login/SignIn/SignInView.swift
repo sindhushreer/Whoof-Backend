@@ -8,26 +8,20 @@
 import Foundation
 import SwiftUI
 
-struct SignUpView: View {
-    @ObservedObject var signUpVM = SignUpViewModel()
+struct SignInView: View {
+    @ObservedObject var signInVM = SignInViewModel()
     
     var body: some View {
         ZStack {
             VStack {
                 VStack {
-                    EntryField(placeHolder: "Name", prompt: signUpVM.namePrompt, field: $signUpVM.name)
-                        .padding()
+                    EntryField(placeHolder: "Email Address", prompt: signInVM.emailPrompt, field: $signInVM.email)
+                        .padding(.horizontal)
                     Divider()
                         .padding(.horizontal)
-                    EntryField(placeHolder: "Email Address", prompt: signUpVM.emailPrompt, field: $signUpVM.email)
-                        .padding()
-                    Divider()
-                        .padding(.horizontal)
-                    EntryField(placeHolder: "Password", prompt: signUpVM.passwordPrompt, field: $signUpVM.password, isSecure: true)
-                        .padding()
+                    EntryField(placeHolder: "Password", prompt: signInVM.passwordPrompt, field: $signInVM.password, isSecure: true)
+                        .padding([.bottom,.horizontal])
                 }
-                .background(Color.white)
-                .cornerRadius(40)
                 .padding()
                 Spacer()
                 Button {
