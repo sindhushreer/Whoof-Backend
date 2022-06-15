@@ -9,12 +9,32 @@ import Foundation
 import SwiftUI
 
 struct HomeView: View {
+    enum WhoofTabs: String {
+        case analytics
+        case home
+        case profile
+    }
+    
+    @State var selectedTab: WhoofTabs = .home
+    
     var body: some View {
         ZStack {
-            Button {
-                
-            } label: {
-                Text("Feed Food")
+            TabView(selection: $selectedTab) {
+                AnaylticsView(tabSelection: $selectedTab)
+                    .tabItem {
+                        Image("Analytics")
+                        Text("Analytics")
+                    }
+                HomeTabView(tabSelection: $selectedTab)
+                    .tabItem {
+                        Image("Home")
+                        Text("Home")
+                    }
+                ProfileView(tabSelection: $selectedTab)
+                    .tabItem {
+                        Image("Profile")
+                        Text("Profile")
+                    }
             }
         }
     }
